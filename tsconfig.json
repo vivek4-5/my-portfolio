@@ -1,0 +1,14 @@
+{
+  "files": [], // Keep this empty if using references
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+   // Note: CompilerOptions here might be minimal as specifics are in referenced files
+   "compilerOptions": {
+      // You could potentially put shared options here,
+      // but often specific targets differ (node vs browser)
+      // Keep the "jsx" setting here as a fallback/base or ensure it's in tsconfig.app.json
+      "jsx": "react-jsx"
+   }
+}

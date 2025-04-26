@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "composite": true, // Often true when referenced
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // Vite uses this
+    "skipLibCheck": true,
+    "module": "ESNext", // Target Node's module system for config files
+    "moduleResolution": "bundler", // Or "node"
+    "allowSyntheticDefaultImports": true, // Often helpful
+    "strict": true // Good practice
+  },
+  "include": ["vite.config.ts"] // Only applies to vite config file
+}
