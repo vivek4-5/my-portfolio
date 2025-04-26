@@ -3,10 +3,11 @@ import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 
 // --- IMPORT PROJECT IMAGES ---
-import projectYtDownloader from '../assets/images/project-yt-downloader.jpg'; // Adjust path if needed
-import projectYtAudio from '../assets/images/project-yt-audio.jpg';       // Adjust path if needed
-import projectFlightFare from '../assets/images/project-flight-fare.jpg';   // Adjust path if needed
-import projectMediaDownloader from '../assets/images/project-media-downloader.jpg'; // Adjust path if needed
+// Verify these relative paths are correct from Projects.tsx to the images
+import projectYtDownloader from '../assets/images/project-yt-downloader.jpg';
+import projectYtAudio from '../assets/images/project-yt-audio.jpg';
+import projectFlightFare from '../assets/images/project-flight-fare.jpg';
+import projectMediaDownloader from '../assets/images/project-media-downloader.jpg';
 // ---------------------------
 
 interface ProjectData {
@@ -22,28 +23,28 @@ const projectsData: ProjectData[] = [
   {
     title: "YouTube Video Downloader",
     description: "A tool to download videos directly from YouTube. Built using Python and relevant libraries.",
-    imageUrl: projectYtDownloader,
+    imageUrl: projectYtDownloader, // Use variable
     githubUrl: "#", /* UPDATE */
     liveDemoUrl: "#" /* UPDATE or remove if no demo */
   },
   {
     title: "YouTube-to-Audio Converter",
     description: "Converts YouTube videos into audio format (e.g., MP3). Developed with Python.",
-    imageUrl: projectYtAudio,
+    imageUrl: projectYtAudio, // Use variable
     githubUrl: "#", /* UPDATE */
     liveDemoUrl: "#" /* UPDATE or remove if no demo */
   },
   {
     title: "Flight Fare Prediction",
     description: "An application predicting flight fares, likely involving data analysis and machine learning techniques in Python.",
-    imageUrl: projectFlightFare,
+    imageUrl: projectFlightFare, // Use variable
     githubUrl: "#", /* UPDATE */
     liveDemoUrl: "#" /* UPDATE or remove if no demo */
   },
   {
     title: "Media Downloader",
     description: "A general-purpose tool for downloading media content (details depend on implementation). Built with Python.",
-    imageUrl: projectMediaDownloader,
+    imageUrl: projectMediaDownloader, // Use variable
     githubUrl: "#", /* UPDATE */
     liveDemoUrl: "#" /* UPDATE or remove if no demo */
   },
@@ -56,12 +57,11 @@ const Projects = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }} className="text-center mb-12"> Featured Projects </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* --- RENDER PROJECTCARD AGAIN --- */}
           {projectsData.map((project, index) => (
-            <div key={index} className="p-4 border border-red-500"> {/* Basic styling */}
-         <h3 className="font-bold">{project.title}</h3>
-         <p>Item {index}</p>
-       </div>
+            <ProjectCard key={index} {...project} index={index} />
            ))}
+           {/* ----------------------------- */}
         </div>
       </div>
     </section>
