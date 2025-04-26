@@ -57,7 +57,10 @@ const Projects = () => {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }} className="text-center mb-12"> Featured Projects </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} {...project} index={index} />
+            <div key={index} className="p-4 border border-red-500"> {/* Basic styling */}
+         <h3 className="font-bold">{project.title}</h3>
+         <p>Item {index}</p>
+       </div>
            ))}
         </div>
       </div>
