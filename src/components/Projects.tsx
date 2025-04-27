@@ -24,29 +24,29 @@ const projectsData: ProjectData[] = [
     title: "YouTube Video Downloader",
     description: "A tool to download videos directly from YouTube. Built using Python and relevant libraries.",
     imageUrl: projectYtDownloader, // Use variable
-    githubUrl: "#", /* UPDATE */
-    liveDemoUrl: "#" /* UPDATE or remove if no demo */
+    githubUrl: "https://github.com/BibekKumarThagunna/4k-Youtube-Video-Downloader", /* UPDATE */
+    liveDemoUrl: "https://4k-youtube-video-downloader.streamlit.app/" /* UPDATE or remove if no demo */
   },
   {
     title: "YouTube-to-Audio Converter",
     description: "Converts YouTube videos into audio format (e.g., MP3). Developed with Python.",
     imageUrl: projectYtAudio, // Use variable
-    githubUrl: "#", /* UPDATE */
-    liveDemoUrl: "#" /* UPDATE or remove if no demo */
+    githubUrl: "https://github.com/BibekKumarThagunna/Video-To-Audio-Converter", /* UPDATE */
+    liveDemoUrl: "https://video-to-audio-converter-ftwnk8kcvrmdjx3utefscx.streamlit.app/" /* UPDATE or remove if no demo */
   },
   {
     title: "Flight Fare Prediction",
     description: "An application predicting flight fares, likely involving data analysis and machine learning techniques in Python.",
     imageUrl: projectFlightFare, // Use variable
-    githubUrl: "#", /* UPDATE */
-    liveDemoUrl: "#" /* UPDATE or remove if no demo */
+    githubUrl: "https://github.com/BibekKumarThagunna/ffp", /* UPDATE */
+    liveDemoUrl: "https://flightfare.streamlit.app/" /* UPDATE or remove if no demo */
   },
   {
     title: "Media Downloader",
     description: "A general-purpose tool for downloading media content (details depend on implementation). Built with Python.",
     imageUrl: projectMediaDownloader, // Use variable
-    githubUrl: "#", /* UPDATE */
-    liveDemoUrl: "#" /* UPDATE or remove if no demo */
+    githubUrl: "https://github.com/BibekKumarThagunna/Media-Downloader", /* UPDATE */
+    liveDemoUrl: "https://media-downloader.streamlit.app/" /* UPDATE or remove if no demo */
   },
   // ------------------------------------
 ];
