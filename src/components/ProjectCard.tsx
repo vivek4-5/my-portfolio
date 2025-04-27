@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
            )}
            {/* Live Demo Link */}
            {isValidUrl(liveDemoUrl) && (
-             <a href={liveDemoUrl} target="_blank" rel="noopener noreferrer" className="project-link bg-primary text-white border-primary hover:bg-primary-dark" aria-label={`Live demo of ${title}`}> {/* Example distinct style */}
+             <a href={liveDemoUrl} target="_blank" rel="noopener noreferrer" className="project-link bg-primary text-white border-primary hover:bg-primary-dark hover:text-white" aria-label={`Live demo of ${title}`}> {/* Example distinct style */}
                <FaExternalLinkAlt className="mr-1" aria-hidden="true"/> Live Demo
              </a>
            )}
