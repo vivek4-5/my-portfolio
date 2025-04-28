@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-interface ProjectCardProps {
+interface ProjectCardProps {//
   title: string;
   description: string;
   imageUrl: string; // This receives the processed path string from Projects.tsx
