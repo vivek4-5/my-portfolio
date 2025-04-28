@@ -1,14 +1,14 @@
 // src/components/ProjectCard.tsx
-import React from 'react'; // Keep React import as React.FC is used
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Ensure FaExternalLinkAlt is imported
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string; // This receives the processed path string from Projects.tsx
   githubUrl?: string;
-  liveDemoUrl?: string; // Added optional live demo URL
+  liveDemoUrl?: string;
   index: number;
 }
 
@@ -22,7 +22,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: index * 0.1 }
+    }
   };
 
   // Function to check if a URL is valid (not just '#')
@@ -32,14 +36,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className="project-card group" // Ensure 'group' class is present
+      className="project-card group" // Keep 'group' for CSS hover effects on children
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
+      // --- ADDED HOVER ANIMATION ---
+      whileHover={{ scale: 1.03, y: -5 }} // Scale up slightly, move up 5px
+      transition={{ type: "spring", stiffness: 400, damping: 17 }} // Add transition for smooth hover effect
+      // -----------------------------
     >
+      {/* Image uses group-hover defined in index.css */}
       <img src={imageUrl} alt={title} className="project-image" loading="lazy" />
       <div className="p-6 flex flex-col flex-grow">
+         {/* Title uses group-hover defined in index.css */}
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>
         <div className="mt-auto flex flex-wrap gap-3">
